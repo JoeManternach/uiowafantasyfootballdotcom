@@ -1,0 +1,14 @@
+.header-bar{
+    background-color: #FFCD00;
+    padding-left: 1%;
+    padding-top: 1%;
+    color: #000000;
+}
+.badge-img {
+    width: 5%;
+    height: auto;
+}
+
+/* UIOWA APPROVED COLORS */
+/* Black: #000000 USE GOLD BADGE*/
+/* Gold: #FFCD00 USE BLACK BADGE WITH GOLD UIOWA*/
