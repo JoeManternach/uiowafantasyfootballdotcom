@@ -1,6 +1,6 @@
 .header-bar{
     background-color: #FFCD00;
-    padding: 1%;
+    padding-top: 1%;
     padding-bottom: 0;
     color: #000000;
 }
@@ -10,10 +10,11 @@
 }
 .title-container {
     display: flex;
-    
+    padding-left: 0.5%;
+    justify-content: left;
 }
 .title {
-    font-family: Zilla Slab, Zilla-fallback, serif;/* font-family: "Times New Roman", Times, serif; */
+    font-family: "Times New Roman", Times, serif; 
     letter-spacing: 0;
     line-height: 1;
     font-size: clamp(2.3rem, calc(2.3662vw + 1.4127rem), 3.35rem);
@@ -25,17 +26,21 @@
 .nav-bar-list {
     list-style-type: none;
     overflow: hidden;
-    margin-top: 2%;
-}
-    
-.nav-bar-list li{
-    float: left;
+    margin-top: 1%;
     background-color: #000000;
 }
+.nav-bar-list li{
+    float: left;
+}
 .nav-bar-list li a {
+    display: inline-block;
     color: white;
     text-decoration: none;
-    padding: 30px;
+    text-align: center;
+    padding: 14px 16px;
+}
+.nav-bar-list li a:hover{
+    background-color: #63666A;
 }
 /* UIOWA APPROVED COLORS */
 /* Black: #000000 USE GOLD BADGE*/
