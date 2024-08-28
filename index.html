@@ -14,25 +14,91 @@
             <img class="badge-img" src="pics/student_org_badges/IOWA-StudentOrgBadge-FullColor-RGB-R.png" alt="UIowa Badge">
             <p class="title">Fantasy Football Organization</p>
         </div>
-        <nav>
-            <ul class="nav-bar-list">
-                <li><a href="#news-and-events">News & Events</a></li>
-            </ul>
-        </nav>
+        <!-- Wrap navigation in a new div for styling -->
+        <div class="nav-strip">
+            <nav>
+                <ul class="nav-bar-list">
+                    <li><a href="#news" onclick="show_content('news'); event.preventDefault();">News</a></li>
+                    <li><a href="#calendar" onclick="show_content('calendar'); event.preventDefault();">Calendar</a></li>
+                    <li><a href="#contact" onclick="show_content('contact'); event.preventDefault();">Contact Information</a></li>
+                    <li><a href="#join" onclick="show_content('join'); event.preventDefault();">Join!</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
-        <section id="news-and-events" class="news-and-events-main">
+        <!-- News & Events Section -->
+        <section id="news" class="main-section">
             <article class="panel news-panel">
                 <h2 class="panel-title">News</h2>
-                <p>Exciting times ahead for fantasy football enthusiasts at the University of Iowa! Our 
-                    new Fantasy Football Organization is gearing up for an action-packed season, and we 
-                    can't wait to kick things off. With weekly meetings and a club fantasy league, there's 
-                    always something happening. Stay tuned for updates, tips, and the latest news from the 
-                    world of fantasy football. Whether you're a seasoned manager or just starting out, we've 
-                    got the resources and community to help you dominate your league!
+                <p>Can't make the meeting? No worries come here after to see the notes from what was discussed!
                 </p>
+            </article>            
+
+            <article class="panel stats-panel">
+                <h2 class="panel-title">Stats & Updates</h2>
+                <iframe src="https://www.pro-football-reference.com/boxscores/" title="Pro Football Stats"></iframe>
             </article>
 
+        </section>
+
+        <!-- Calendar Section -->
+        <section id="calendar" class="main-section" style="display: none;">
+            <article class="panel calendar-panel">
+                <h2 class="panel-title">Calendar</h2>
+                <h4>Sept 3, 2024</h4>
+                <p>First meeting!<br>Find us in the Adler Journalism and Mass Communication Building room E105 at 7:40pm</p>
+            </article>
+        </section>
+
+        <!-- Contact Information Section -->
+        <section id="contact" class="main-section" style="display: none;">
+            <h2 class="panel-title">Contact Information</h2>
+            <div class="contact-panel">
+                <div class="contact-member">
+                    <h2>Ben Hartman</h2>
+                    <p>Position: President</p>
+                    <p>Major: Interdepartmental Studies</p>
+                    <p>Year: Senior</p>
+                    <p>email: benjamin-hartman@uiowa.edu</p>
+                    <p>Other involvement: </p>
+                </div>
+                <div class="contact-member">
+                    <h2>Joe Manternach</h2>
+                    <p>Position: Vice President</p>
+                    <p>Major: Electrical Engineering</p>
+                    <p>Year: Senior</p>
+                    <p>email: joseph-manternach@uiowa.edu</p>
+                    <p>Other involvement: Robotics</p>
+                </div>
+                <div class="contact-member">
+                    <h2>Joe Hammer</h2>
+                    <p>Position: Finances Chair</p>
+                    <p>Major: </p>
+                    <p>Year: Senior</p>
+                    <p>email: joseph-hammer@uiowa.edu</p>
+                    <p>Other involvement: </p>
+                </div>
+                <div class="contact-member">
+                    <h2>Emmy Vernam</h2>
+                    <p>Position: Secretary and Events Chair</p>
+                    <p>Major: </p>
+                    <p>Year: Senior</p>
+                    <p>email: emily-vernam@uiowa.edu</p>
+                    <p>Other involvement: </p>
+                </div>
+                <div class="contact-member">
+                    <h2>Alex Johnson</h2>
+                    <p>Position: Communications Chair</p>
+                    <p>Major: </p>
+                    <p>Year: Senior</p>
+                    <p>email: alexander-johnson@uiowa.edu</p>
+                    <p>Other involvement: </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="join" class="main-section" style="display: none;">
             <article class="panel join-panel">
                 <h2 class="panel-title">Join</h2>
                 <p>To join our Fantasy Football Club at the University of Iowa, simply email either 
@@ -44,18 +110,6 @@
                     your fantasy league!
                 </p>
             </article>
-
-            <article class="panel calendar-panel">
-                <h2 class="panel-title">Calendar</h2>
-                <h4>Sept 3, 2024</h4>
-                <p>First meeting!<br>Find us in the Adler Journalism and Mass Communication Buidling room E105</p>
-            </article>
-
-            <article class="panel stats-panel">
-                <h2 class="panel-title">Stats & Updates</h2>
-                <iframe src="https://www.pro-football-reference.com/boxscores/" title="Pro Football Stats"></iframe>
-            </article>
-
         </section>
     </main>
     <footer>
