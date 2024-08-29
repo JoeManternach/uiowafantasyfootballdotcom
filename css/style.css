@@ -9,9 +9,10 @@ body {
     color: #333;
     background-color: #f4f4f4;
 }
+
 /* Header */
 .header-bar {
-    background-color: #FFCD00;
+    background-color: #FFCD00; /**/
     color: #000;
     display: flex;
     flex-direction: column; /* Change to column to stack the title and nav */
@@ -22,11 +23,11 @@ body {
     display: flex;
     padding: 15px 5%;
     align-items: center;
-    margin-bottom: 10px; /* Add margin to separate from the nav strip */
+    margin-bottom: 0px; /* Add margin to separate from the nav strip */
 }
 
-.badge-img {
-    width: 50px;
+.logo-img {
+    width: 90px;
     margin-right: 15px;
 }
 
@@ -48,6 +49,8 @@ body {
     padding: 10px 5%; /* Padding inside the strip */
     display: flex;
     gap: 30px;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    justify-content: left; /* Centers the nav items */
 }
 
 .nav-bar-list li a {
@@ -120,19 +123,10 @@ main {
     justify-items: center; /* Center items in their grid areas */
 }
 
-/* Ensure the last spot remains empty if there are fewer than six items */
-.contact-panel::after {
-    content: "";
-    display: block;
-    grid-column: span 1; /* Span one column */
-    visibility: hidden; /* Hide the empty space */
-}
-
-/* Contact member styling */
 .contact-member {
     background-color: #fff;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     min-height: 200px; /* Set a default minimum height */
     width: 100%; /* Fill out the column space */
@@ -153,16 +147,68 @@ main {
     line-height: 1.5; /* Improve readability with better line height */
 }
 
-
-
 /* Footer */
 footer {
     background-color: #000;
     color: #fff;
+    display: flex;
     text-align: center;
-    padding: 1px 0;
+    padding: 10px 0;
     font-size: 0.9rem;
     width: 100%;
     position: relative; /* Removes any fixed positioning and lets the footer be naturally placed */
     bottom: 0;
+    justify-content: space-between;
+}
+
+footer p {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.badge-img {
+    width: 50px;
+    margin-left: 15px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.8rem; /* Adjust title font size for smaller screens */
+    }
+
+    .main-section {
+        min-width: 90%; /* Reduce the minimum width for smaller screens */
+    }
+
+    .contact-panel {
+        grid-template-columns: repeat(2, 1fr); /* Reduce to two columns on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .title-container {
+        flex-direction: row; /* Stack badge and title on top of each other */
+        align-items: center;
+    }
+
+    .badge-img {
+        margin-bottom: 10px; /* Add some space below the badge */
+    }
+
+    .nav-strip {
+        padding: 0; /* Remove padding for a tighter look */
+    }
+
+    .nav-bar-list {
+        justify-content: center; /* Keep nav items centered */
+    }
+
+    .contact-panel {
+        grid-template-columns: 1fr; /* Stack contact members vertically on smaller screens */
+    }
+
+    .contact-member {
+        max-width: 90%; /* Use full width for contact members */
+    }
 }
